@@ -7,7 +7,7 @@ console.log("in App")
 
 <main>
 ku-ku 
-    <CitySelectoerList />
+    <!-- <CitySelectoerList /> -->
 </main>
 
 <style>

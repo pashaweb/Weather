@@ -17,11 +17,12 @@ describe ('testing CityWeatherList', () => {
     it('testing CityWeather city weather ', async ()=> {
         const store = writable(mocCityWeatherList);
 
-        const { getByText } = render(CityWeatherList, {props:{cityWeatherStore:store, removeSelectedCity:moceOnClick}});
+        const { getByText } = await render(CityWeatherList, {props:{cityWeatherStore:store, removeSelectedCity:moceOnClick}});
+        await new Promise((r) => setTimeout(r, 2000));
 
-        expect(getByText('London')).not.toBeNull;
+        expect(getByText(/London/)).not.toBeNull;
         expect(getByText('9.0')).not.toBeNull;
-        expect(getByText('Tel Aviv')).not.toBeNull;
+        expect(getByText(/Tel Aviv/)).not.toBeNull;
         expect(getByText('31.5')).not.toBeNull;
        
     })

@@ -6,4 +6,4 @@
 
 </script>
 
-{cityName}: {cityTemp}°C <button on:click={() => removeSelectedCity(cityName)}> - </button>
+<span></span>{cityName}: <span>{cityTemp.toFixed(1)}</span>°C <button on:click={() => removeSelectedCity(cityName)}> - </button>

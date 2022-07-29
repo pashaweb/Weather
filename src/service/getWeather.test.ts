@@ -31,5 +31,5 @@ describe ("Testing weather get temp", () => {
   
     expect(temp).toEqual(9.0);
   });  
-
+})
  
